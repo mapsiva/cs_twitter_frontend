@@ -1,10 +1,10 @@
+//const axios = use ('axios')
 import axios from "axios";
-import { getToken } from "./auth";
+import { getToken } from "./auth"
 
 const api = axios.create({
-    baseURL: process.env.VUE_APP_API_URL || "http://localhost:3333"
+    baseURL: process.env.VUE_APP_API_URL || 'http://localhost:3333'
 });
-
 
 api.interceptors.request.use(async config => {
     const token = getToken();

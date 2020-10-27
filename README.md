@@ -1,4 +1,4 @@
-# twitter-app
+# twitter-app2
 
 ## Project setup
 ```

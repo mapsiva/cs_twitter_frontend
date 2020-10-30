@@ -21,14 +21,22 @@
           {{ tweet.tweet }}
         </div>
       </router-link>
+
+      <TweetReactions
+        :tweet="tweet"
+        :replies="tweet.replies"
+        :favorites.sync="tweet.favorites"
+        :auth-user="authUser"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import TweetReactions from "@/components/Tweet/TweetReactions";
 export default {
   name: "Tweet",
-  components: {},
+  components: { TweetReactions },
   props: {
     tweet: {
       type: Object,
